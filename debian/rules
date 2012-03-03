@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with quilt --with autoreconf
+
+override_dh_auto_test:
+	# do not call make test. It tries to load
+	# some module with absolute path.
+
+override_dh_strip:
+	dh_strip --dbg-package=libfsosystem-dbg
+
+override_dh_installdocs:
+	dh_installdocs --link-doc=libfsosystem0
+
+override_dh_installchangelogs:
+	dh_installchangelogs -XChangeLog

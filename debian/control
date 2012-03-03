@@ -1,0 +1,63 @@
+Source: libfsosystem
+Priority: extra
+Maintainer: Debian FreeSmartphone.Org Team <pkg-fso-maint@lists.alioth.debian.org>
+DM-Upload-Allowed: yes
+Uploaders: Rico Rommel <rico@bierrommel.de>, Sebastian Reichel <sre@debian.org>
+Build-Depends: debhelper (>= 8.1.13),
+               dh-autoreconf,
+               libgee-dev (>=0.5),
+               libglib2.0-dev (>=2.26.0),
+               libvala-0.14-dev,
+               quilt,
+               valac-0.14
+Standards-Version: 3.9.3
+Section: libs
+Homepage: http://freesmartphone.org
+Vcs-Git: git://git.debian.org/git/pkg-fso/libfsosystem.git
+Vcs-Browser: http://git.debian.org/?p=pkg-fso/libfsosystem.git;a=summary
+
+Package: libfsosystem0
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Description: freesmartphone.org system implementation library
+ libfsosystem is a glib-2.0-based library for low level
+ system-related utilities. It provides a API for mounting filesystems,
+ managing network interfaces and loading kernel modules.
+ .
+ This package is part of the freesmartphone.org software stack
+ and is targeted for smartphones.
+
+Package: libfsosystem-dev
+Section: libdevel
+Architecture: any
+Depends: libfsosystem0 (= ${binary:Version}), ${misc:Depends}
+Description: Development files for libfsosystem
+ libfsosystem is a glib-2.0-based library for low level
+ system-related utilities. It provides a API for mounting filesystems,
+ managing network interfaces and loading kernel modules.
+ .
+ This package is part of the freesmartphone.org software stack
+ and is targeted for smartphones.
+ .
+ This package offers files required for the development of new programs
+ with this library and should not be required for using the phone.
+
+Package: libfsosystem-dbg
+Section: debug
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, libfsosystem0 (= ${binary:Version})
+Description: debugging symbols for use with libfsosystem
+ libfsosystem is a glib-2.0-based library for low level
+ system-related utilities. It provides a API for mounting filesystems,
+ managing network interfaces and loading kernel modules.
+ .
+ This package is part of the freesmartphone.org software stack
+ and is targeted for smartphones.
+ .
+ This package contains unstripped shared libraries. It is provided
+ primarily to provide a backtrace with names in a debugger, this makes
+ it somewhat easier to interpret core dumps. The libraries are installed
+ in /usr/lib/debug and are automatically used by gdb.

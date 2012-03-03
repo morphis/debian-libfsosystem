@@ -1,0 +1,19 @@
+libfsosystem (0.1.0~git20120214-1) unstable; urgency=low
+
+  * New upstream snapshot
+  * bump vala dependencies to 0.14
+  * add libgee-dev to build depends
+
+ -- Rico Rommel <rico@bierrommel.de>  Sat, 03 Mar 2012 21:30:50 +0100
+
+libfsosystem (0.1.0~git20110602-1) unstable; urgency=low
+
+  [ Rico Rommel ]
+  * Initial release (Closes: #636159)
+
+  [ Sebastian Reichel ]
+  * add me to uploaders
+  * add multi-arch support
+  * add symbols file
+
+ -- Sebastian Reichel <sre@debian.org>  Sat, 20 Aug 2011 21:02:52 +0200
