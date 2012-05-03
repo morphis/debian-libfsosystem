@@ -1,0 +1,13 @@
+diff --git a/tests/testpath.vala b/tests/testpath.vala
+index 329fbba..2202f94 100644
+--- a/tests/testpath.vala
++++ b/tests/testpath.vala
+@@ -42,7 +42,7 @@ void main( string[] args )
+ {
+     Test.init( ref args );
+ 
+-    Test.add_func( "/FileSystem/Path/IsMountpoint", test_path_is_mount_point );
++    // Test.add_func( "/FileSystem/Path/IsMountpoint", test_path_is_mount_point );
+     Test.add_func( "/FileSystem/Path/IsAbsolute", test_path_is_absolute );
+ 
+     Test.run();
