@@ -2,9 +2,9 @@
 %:
 	dh $@ --with quilt --with autoreconf
 
-override_dh_auto_test:
-	# do not call make test. It tries to load
-	# some module with absolute path.
+override_dh_auto_configure:
+	find . -name *_vala.stamp | xargs rm -f
+	dh_auto_configure -- --enable-vala
 
 override_dh_strip:
 	dh_strip --dbg-package=libfsosystem-dbg
