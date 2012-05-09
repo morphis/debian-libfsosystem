@@ -1,3 +1,14 @@
+libfsosystem (0.10.1-1) unstable; urgency=low
+
+  * Imported Upstream version 0.10.0
+  * Imported Upstream version 0.10.1
+  * Update debian build script to build vala sources instead of shipped c sources
+  * Remove unknown substitution variable ${misc:Pre-Depends} as reported by dpkg-gencontrol
+  * Remove fix-cleanfiles.patch; it's not needed anymore
+  * Add patch to disable a test which checks for a mount point at compile time
+
+ -- Simon Busch <morphis@gravedo.de>  Wed, 09 May 2012 11:25:03 +0200
+
 libfsosystem (0.1.0~git20120214-1) unstable; urgency=low
 
   * New upstream snapshot
