@@ -1,5 +1,5 @@
 m4_define([fsosystem_released], [1])
-m4_define([fsosystem_base_version], [0.10.0])
+m4_define([fsosystem_base_version], [0.10.1])
 m4_define([fsosystem_maybe_gitrev], m4_if(fsosystem_released, [1], [], [m4_esyscmd([git show-ref --hash=5 HEAD | tr -d '\n\r'])]))
 m4_define([fsosystem_version], m4_if(fsosystem_released, [1], [fsosystem_base_version], [fsosystem_base_version-fsosystem_maybe_gitrev]))
 
@@ -84,6 +84,7 @@ AM_CONDITIONAL([HAVE_DEBUG], [test "x$enable_debug" = "xyes"])
 AC_CONFIG_FILES([Makefile
   fsosystem-2.0.pc
   fsosystem/Makefile
+  vapi/Makefile
   tests/Makefile])
 AC_OUTPUT
 
