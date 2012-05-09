@@ -47,7 +47,6 @@ Description: Development files for libfsosystem
 Package: libfsosystem-dbg
 Section: debug
 Architecture: any
-Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, libfsosystem0 (= ${binary:Version})
 Description: debugging symbols for use with libfsosystem
  libfsosystem is a glib-2.0-based library for low level
